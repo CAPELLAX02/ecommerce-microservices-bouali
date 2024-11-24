@@ -1,5 +1,6 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.dto.request;
 
+import com.capellax.ecommerce.model.Address;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 

@@ -1,5 +1,11 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.service;
 
+import com.capellax.ecommerce.exception.CustomerNotFoundException;
+import com.capellax.ecommerce.dto.CustomerMapper;
+import com.capellax.ecommerce.dto.request.CustomerRequest;
+import com.capellax.ecommerce.dto.response.CustomerResponse;
+import com.capellax.ecommerce.model.Customer;
+import com.capellax.ecommerce.repository.CustomerRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;

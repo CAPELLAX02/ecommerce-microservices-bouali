@@ -1,4 +1,6 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.dto.response;
+
+import com.capellax.ecommerce.model.Address;
 
 public record CustomerResponse(
         String id,

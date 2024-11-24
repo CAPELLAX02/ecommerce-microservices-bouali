@@ -1,4 +1,4 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.model;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

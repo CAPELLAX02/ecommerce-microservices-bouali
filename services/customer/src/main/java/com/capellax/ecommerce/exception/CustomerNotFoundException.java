@@ -1,4 +1,4 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

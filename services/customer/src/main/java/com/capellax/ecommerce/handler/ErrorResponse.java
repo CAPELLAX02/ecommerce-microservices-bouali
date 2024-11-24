@@ -1,4 +1,4 @@
-package com.capellax.ecommerce;
+package com.capellax.ecommerce.handler;
 
 import java.util.Map;
 

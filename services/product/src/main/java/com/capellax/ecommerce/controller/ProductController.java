@@ -1,5 +1,10 @@
-package com.capellax.ecommerce.product;
+package com.capellax.ecommerce.controller;
 
+import com.capellax.ecommerce.dto.request.ProductPurchaseRequest;
+import com.capellax.ecommerce.dto.request.ProductRequest;
+import com.capellax.ecommerce.dto.response.ProductPurchaseResponse;
+import com.capellax.ecommerce.dto.response.ProductResponse;
+import com.capellax.ecommerce.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +30,7 @@ public class ProductController {
     public ResponseEntity<List<ProductPurchaseResponse>> purchaseProduct(
             @RequestBody @Valid List<ProductPurchaseRequest> request
     ) {
-        return ResponseEntity.ok(service.purchaseProduct(request));
+        return ResponseEntity.ok(service.purchaseProducts(request));
     }
 
     @GetMapping("/{product-id}")

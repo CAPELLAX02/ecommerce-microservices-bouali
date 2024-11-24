@@ -1,6 +1,6 @@
-package com.capellax.ecommerce.product;
+package com.capellax.ecommerce.dto.request;
 
-import com.capellax.ecommerce.category.Category;
+import com.capellax.ecommerce.model.Category;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
@@ -23,7 +23,7 @@ public record ProductRequest(
         BigDecimal price,
 
         @NotNull(message = "Product category is required")
-        Category category
+        Integer categoryId
 
 ) {
 }

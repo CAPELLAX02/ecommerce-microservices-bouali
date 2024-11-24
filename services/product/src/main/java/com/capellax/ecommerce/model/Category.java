@@ -1,6 +1,5 @@
-package com.capellax.ecommerce.category;
+package com.capellax.ecommerce.model;
 
-import com.capellax.ecommerce.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

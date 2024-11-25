@@ -1,7 +1,7 @@
-package com.capellax.ecommerce.controller.service;
+package com.capellax.ecommerce.service;
 
-import com.capellax.ecommerce.controller.dto.mapper.OrderLineMapper;
-import com.capellax.ecommerce.controller.dto.request.OrderLineRequest;
+import com.capellax.ecommerce.dto.mapper.OrderLineMapper;
+import com.capellax.ecommerce.dto.request.OrderLineRequest;
 import com.capellax.ecommerce.repository.OrderLineRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

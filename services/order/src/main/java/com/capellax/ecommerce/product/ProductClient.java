@@ -1,7 +1,7 @@
 package com.capellax.ecommerce.product;
 
-import com.capellax.ecommerce.controller.dto.request.PurchaseRequest;
-import com.capellax.ecommerce.controller.dto.response.PurchaseResponse;
+import com.capellax.ecommerce.dto.request.PurchaseRequest;
+import com.capellax.ecommerce.dto.response.PurchaseResponse;
 import com.capellax.ecommerce.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,7 +1,7 @@
 package com.capellax.ecommerce.controller;
 
-import com.capellax.ecommerce.controller.dto.request.OrderRequest;
-import com.capellax.ecommerce.controller.service.OrderService;
+import com.capellax.ecommerce.dto.request.OrderRequest;
+import com.capellax.ecommerce.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

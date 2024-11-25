@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.controller.dto.request;
+package com.capellax.ecommerce.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

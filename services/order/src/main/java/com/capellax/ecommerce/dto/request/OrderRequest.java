@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.controller.dto.request;
+package com.capellax.ecommerce.dto.request;
 
 import com.capellax.ecommerce.enums.PaymentMethod;
 import jakarta.validation.constraints.NotBlank;

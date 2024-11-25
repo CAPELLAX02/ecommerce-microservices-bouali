@@ -1,6 +1,6 @@
-package com.capellax.ecommerce.controller.dto.mapper;
+package com.capellax.ecommerce.dto.mapper;
 
-import com.capellax.ecommerce.controller.dto.request.OrderRequest;
+import com.capellax.ecommerce.dto.request.OrderRequest;
 import com.capellax.ecommerce.model.Order;
 import org.springframework.stereotype.Service;
 

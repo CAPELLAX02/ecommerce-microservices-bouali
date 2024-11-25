@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.controller.dto.request;
+package com.capellax.ecommerce.dto.request;
 
 public record OrderLineRequest(
         Integer id,

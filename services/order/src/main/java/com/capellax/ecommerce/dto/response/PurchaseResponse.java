@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.controller.dto.response;
+package com.capellax.ecommerce.dto.response;
 
 import java.math.BigDecimal;
 

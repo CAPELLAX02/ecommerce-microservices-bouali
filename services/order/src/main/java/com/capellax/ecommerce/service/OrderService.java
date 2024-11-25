@@ -1,14 +1,12 @@
 package com.capellax.ecommerce.service;
 
 import com.capellax.ecommerce.dto.mapper.OrderMapper;
-import com.capellax.ecommerce.dto.request.OrderConfirmation;
-import com.capellax.ecommerce.dto.request.OrderLineRequest;
-import com.capellax.ecommerce.dto.request.OrderRequest;
-import com.capellax.ecommerce.dto.request.PurchaseRequest;
+import com.capellax.ecommerce.dto.request.*;
 import com.capellax.ecommerce.customer.CustomerClient;
 import com.capellax.ecommerce.dto.response.OrderResponse;
 import com.capellax.ecommerce.exception.BusinessException;
 import com.capellax.ecommerce.kafka.OrderProducer;
+import com.capellax.ecommerce.payment.PaymentClient;
 import com.capellax.ecommerce.product.ProductClient;
 import com.capellax.ecommerce.repository.OrderRepository;
 import jakarta.persistence.EntityNotFoundException;
@@ -28,6 +26,7 @@ public class OrderService {
     private final OrderMapper mapper;
     private final OrderLineService orderLineService;
     private final OrderProducer orderProducer;
+    private final PaymentClient paymentClient;
 
     public Integer createOrder(@Valid OrderRequest request) {
         var customer = customerClient.findCustomerById(request.customerId())
@@ -46,6 +45,14 @@ public class OrderService {
                     )
             );
         }
+        var paymentRequest = new PaymentRequest(
+                request.amount(),
+                request.paymentMethod(),
+                order.getId(),
+                order.getReference(),
+                customer
+        );
+        paymentClient.requestOrderPayment(paymentRequest);
         orderProducer.sendOrderConfirmation(
                 new OrderConfirmation(
                         request.reference(),

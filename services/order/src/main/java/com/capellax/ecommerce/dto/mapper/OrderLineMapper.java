@@ -1,6 +1,7 @@
 package com.capellax.ecommerce.dto.mapper;
 
 import com.capellax.ecommerce.dto.request.OrderLineRequest;
+import com.capellax.ecommerce.dto.response.OrderLineResponse;
 import com.capellax.ecommerce.model.Order;
 import com.capellax.ecommerce.model.OrderLine;
 import org.springframework.stereotype.Service;
@@ -17,4 +18,10 @@ public class OrderLineMapper {
                 .build();
     }
 
+    public OrderLineResponse toOrderLineResponse(OrderLine orderLine) {
+        return new OrderLineResponse(
+                orderLine.getId(),
+                orderLine.getQuantity()
+        );
+    }
 }

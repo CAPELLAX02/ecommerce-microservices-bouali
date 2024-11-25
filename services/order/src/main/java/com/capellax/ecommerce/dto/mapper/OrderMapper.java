@@ -1,6 +1,7 @@
 package com.capellax.ecommerce.dto.mapper;
 
 import com.capellax.ecommerce.dto.request.OrderRequest;
+import com.capellax.ecommerce.dto.response.OrderResponse;
 import com.capellax.ecommerce.model.Order;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +18,13 @@ public class OrderMapper {
                 .build();
     }
 
+    public OrderResponse fromOrder(Order order) {
+        return new OrderResponse(
+                order.getId(),
+                order.getReference(),
+                order.getTotalAmount(),
+                order.getPaymentMethod(),
+                order.getCustomerId()
+        );
+    }
 }

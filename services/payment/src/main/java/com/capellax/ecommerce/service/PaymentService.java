@@ -1,7 +1,9 @@
 package com.capellax.ecommerce.service;
 
 import com.capellax.ecommerce.dto.ProductMapper;
+import com.capellax.ecommerce.dto.request.PaymentNotificationRequest;
 import com.capellax.ecommerce.dto.request.PaymentRequest;
+import com.capellax.ecommerce.notification.NotificationProducer;
 import com.capellax.ecommerce.repository.PaymentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,9 +14,21 @@ public class PaymentService {
 
     private final PaymentRepository repository;
     private final ProductMapper mapper;
+    private final NotificationProducer notificationProducer;
 
     public Integer createPayment(PaymentRequest request) {
         var payment = repository.save(mapper.toPayment(request));
+        notificationProducer.sendNotification(
+                new PaymentNotificationRequest(
+                        request.orderReference(),
+                        request.amount(),
+                        request.paymentMethod(),
+                        request.customer().firstName(),
+                        request.customer().lastName(),
+                        request.customer().email()
+                )
+        );
+        return payment.getId();
     }
 
 }

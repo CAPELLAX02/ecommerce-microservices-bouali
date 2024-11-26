@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.dto.request;
+package com.capellax.ecommerce.notification;
 
 import com.capellax.ecommerce.enums.PaymentMethod;
 

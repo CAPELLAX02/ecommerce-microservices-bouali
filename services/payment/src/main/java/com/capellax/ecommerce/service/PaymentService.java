@@ -1,7 +1,7 @@
 package com.capellax.ecommerce.service;
 
 import com.capellax.ecommerce.dto.ProductMapper;
-import com.capellax.ecommerce.dto.request.PaymentNotificationRequest;
+import com.capellax.ecommerce.notification.PaymentNotificationRequest;
 import com.capellax.ecommerce.dto.request.PaymentRequest;
 import com.capellax.ecommerce.notification.NotificationProducer;
 import com.capellax.ecommerce.repository.PaymentRepository;

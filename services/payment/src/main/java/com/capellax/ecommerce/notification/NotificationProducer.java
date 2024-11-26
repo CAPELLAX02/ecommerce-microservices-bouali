@@ -1,6 +1,5 @@
 package com.capellax.ecommerce.notification;
 
-import com.capellax.ecommerce.dto.request.PaymentNotificationRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

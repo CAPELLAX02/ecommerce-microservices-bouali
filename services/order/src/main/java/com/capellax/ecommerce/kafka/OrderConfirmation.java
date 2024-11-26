@@ -1,4 +1,4 @@
-package com.capellax.ecommerce.dto.request;
+package com.capellax.ecommerce.kafka;
 
 import com.capellax.ecommerce.dto.response.CustomerResponse;
 import com.capellax.ecommerce.dto.response.PurchaseResponse;

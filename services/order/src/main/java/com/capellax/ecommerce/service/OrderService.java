@@ -5,6 +5,7 @@ import com.capellax.ecommerce.dto.request.*;
 import com.capellax.ecommerce.customer.CustomerClient;
 import com.capellax.ecommerce.dto.response.OrderResponse;
 import com.capellax.ecommerce.exception.BusinessException;
+import com.capellax.ecommerce.kafka.OrderConfirmation;
 import com.capellax.ecommerce.kafka.OrderProducer;
 import com.capellax.ecommerce.payment.PaymentClient;
 import com.capellax.ecommerce.product.ProductClient;

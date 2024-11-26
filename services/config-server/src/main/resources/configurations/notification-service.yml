@@ -5,7 +5,7 @@ spring:
       password: 123456
       host: localhost
       port: 27017
-      database: customer
+      database: notification
       authentication-database: admin
 
   kafka:
@@ -15,7 +15,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*" # for local development environment
-        spring.json.type.mapping: orderConfirmation:com.capellax.ecommerce.kafka.OrderConfirmation, paymentConfirmation:com.capellax.ecommerce.notification.PaymentNotificationRequest
+        spring.json.type.mapping: orderConfirmation:com.capellax.ecommerce.kafka.order.OrderConfirmation, paymentConfirmation:com.capellax.ecommerce.kafka.payment.PaymentConfirmation
       group-id: paymentGroup, orderGroup
       auto-offset-reset: earliest
 

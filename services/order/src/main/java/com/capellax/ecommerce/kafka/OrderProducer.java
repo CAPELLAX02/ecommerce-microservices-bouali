@@ -1,6 +1,5 @@
 package com.capellax.ecommerce.kafka;
 
-import com.capellax.ecommerce.dto.request.OrderConfirmation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

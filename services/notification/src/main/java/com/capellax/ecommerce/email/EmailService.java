@@ -51,7 +51,7 @@ public class EmailService {
         Context context = new Context();
         context.setVariables(variables);
 
-        mimeMessageHelper.setSubject(templateName);
+        mimeMessageHelper.setSubject(EmailTemplate.PAYMENT_CONFIRMATION.getSubject());
 
         try {
             String htmlTemplate = templateEngine.process(templateName, context);
@@ -92,7 +92,7 @@ public class EmailService {
         Context context = new Context();
         context.setVariables(variables);
 
-        mimeMessageHelper.setSubject(templateName);
+        mimeMessageHelper.setSubject(EmailTemplate.ORDER_CONFIRMATION.getSubject());
 
         try {
             String htmlTemplate = templateEngine.process(templateName, context);

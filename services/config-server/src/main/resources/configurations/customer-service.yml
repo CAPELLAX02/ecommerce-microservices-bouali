@@ -1,11 +1,7 @@
 spring:
   data:
     mongodb:
-      username: capellax
-      password: 123456
-      host: localhost
-      port: 27017
-      database: customer
-      authentication-database: admin
+      uri: mongodb://capellax:123456@localhost:27017/customer?authSource=admin
+
 server:
   port: 8090

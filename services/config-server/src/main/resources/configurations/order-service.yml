@@ -25,5 +25,5 @@ server:
 application:
   config:
     customer-url: http://localhost:8090/api/v1/customers
-    payment-url: http://localhost:8060/api/v1/payment
+    payment-url: http://localhost:8060/api/v1/payments
     product-url: http://localhost:8050/api/v1/products

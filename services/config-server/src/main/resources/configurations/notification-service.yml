@@ -1,12 +1,7 @@
 spring:
   data:
     mongodb:
-      username: capellax
-      password: 123456
-      host: localhost
-      port: 27017
-      database: notification
-      authentication-database: admin
+      uri: mongodb://capellax:123456@localhost:27017/notification?authSource=admin
 
   kafka:
     consumer:
